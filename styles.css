@@ -1,0 +1,152 @@
+:root{
+  --menu-width: 15%;
+  --header-height: 120px;
+}
+
+*{ box-sizing: border-box; }
+
+html, body{
+  height: 100%;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+#jumpMenu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--menu-width);
+  height: 100vh;
+  padding: 20px 12px;
+  overflow-y: auto;
+
+  background: #caa23a; 
+  border-right: 3px solid #111;
+}
+
+#jumpMenu h2{
+  margin: 0 0 16px 0;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+#jumpMenu a{
+  display: inline-block;
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #1133cc;
+}
+
+main{
+  margin-left: var(--menu-width);
+  min-height: 100vh;
+  padding-top: var(--header-height);
+  padding-left: 24px;
+  padding-right: 24px;
+  background: #f4f4f4;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: var(--menu-width);
+  width: calc(100% - var(--menu-width));
+  height: var(--header-height);
+  z-index: 1000;
+
+  background: #d40000;
+  border-bottom: 6px solid #000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+header > p{
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+}
+
+header nav{
+  display: flex;
+  gap: 20px;
+  padding: 6px 0;
+}
+
+header nav button{
+  width: 220px;
+  padding: 14px 12px;
+
+  background: #0b19ff;
+  color: #fff;
+  border: 6px solid #000;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+header nav button:hover{
+  filter: brightness(0.95);
+}
+
+main > h1{
+  margin: 28px 0 22px 0;
+  text-align: center;
+  font-size: 3rem;
+}
+
+#container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 90px;
+}
+
+article{
+  width: 300px;
+  background: #fff;
+  padding: 12px 14px;
+}
+
+article h2{
+  margin: 0 0 8px 0;
+  font-size: 1.9rem;
+}
+
+article p{
+  margin: 0 0 10px 0;
+  line-height: 1.35;
+}
+
+#thanks{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 1100;
+
+  margin: 0;
+  padding: 22px 28px;
+
+  background: #8fd0f3;
+  border-top: 4px solid #000;
+  border-left: 4px solid #000;
+
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+footer{
+  margin-top: 40px;
+  padding: 18px 0 40px 0;
+  border-top: 2px solid #bbb;
+}
+
+footer p{
+  margin: 0 0 10px 0;
+  font-weight: bold;
+}
